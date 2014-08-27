@@ -1,0 +1,8 @@
+require 'nokogiri'
+
+doc = Nokogiri::HTML(File.open('fippa.xhtml')) do |config|
+  config.strict.nonet
+end
+
+nodes = doc.xpath("html/*")
+
